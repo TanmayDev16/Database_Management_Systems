@@ -1,0 +1,16 @@
+import tkinter as tk
+from tkinter import messagebox
+
+def show_popup():
+    messagebox.showinfo("Warning", "Seller cannot be deleted as there are pending orders.")
+
+# Create the main window
+root = tk.Tk()
+root.title("Seller Management")
+
+# Create a button
+button = tk.Button(root, text="Delete Seller", command=show_popup)
+button.pack(pady=20)
+
+# Run the application
+root.mainloop()
